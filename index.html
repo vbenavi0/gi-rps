@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script> 
+</head>
+<body>
+    <main>
+
+        <section id = 'cont'>
+            <h1>
+                Rock Paper Scissors
+            </h1>
+            <h2 id = 'choice'>
+                Choose Rock, Paper, or Scissors!
+            </h2>
+            <h2 id = 'cpuChoice'>   
+            </h2>
+            <h2 id = 'winner'>
+            </h2>
+            <section>
+                <button id = 'rock' class="op" onclick="choice('rock')"> <p>Rock</p> </button>
+                <button id = 'paper' class="op" onclick="choice('paper')"> <p>Paper</p> </button>
+                <button id = 'scissors' class="op" onclick="choice('scissors')"> <p>Scissors</p> </button>
+            </section>
+
+            <p id  = 'pWins'>Player Wins: 0</p>
+            <p id  = 'cWins'>CPU Wins: 0</p>
+            <button id = 'reset' class="op" onclick="reset()"> <p>Reset</p> </button>
+        </section>
+    </main>
+</body>
+</html>
