@@ -25,7 +25,7 @@ function tie(){
 
 function choice(hand){
     player = hand;
-    document.getElementById("choice").innerHTML = "You chose " + player;
+    document.getElementById("choice").innerHTML = "You chose: " + player;
 
     cpuChoice = Math.floor(Math.random() * 3);
     console.log(cpuChoice)
@@ -38,7 +38,7 @@ function choice(hand){
     else if(cpuChoice === 2){
         cpu = 'scissors';
     }
-    document.getElementById("cpuChoice").innerHTML = "CPU chose " + cpu;
+    document.getElementById("cpuChoice").innerHTML = "CPU chose: " + cpu;
 
     if(player === cpu){
         tie();
@@ -61,15 +61,40 @@ function choice(hand){
     else if(player === 'scissors' && cpu === 'paper'){
         win();
     }
-
+    setTimeout(showPlayer, 1000);
+    setTimeout(showCPU, 2000);
+    setTimeout(showNext, 3000);
+    document.getElementById("choose").innerHTML = "Choose Next Hand!"
 }
 
 function reset(){
-    document.getElementById("choice").innerHTML = "Choose Rock, Paper, or Scissors!"
-    document.getElementById("cpuChoice").innerHTML = "";
-    document.getElementById("winner").innerHTML = "";
-    pWins = 0;
-    cWins = 0;
-    document.getElementById("pWins").innerHTML = "Player Wins: " + pWins;
-    document.getElementById("cWins").innerHTML = "CPU Wins: " + cWins;
+    // document.getElementById("choose").innerHTML = "Choose Rock, Paper, or Scissors!"
+    // document.getElementById("choice").innerHTML = "Player"
+    // document.getElementById("cpuChoice").innerHTML = "CPU";
+    // document.getElementById("winner").innerHTML = "Result";
+    // pWins = 0;
+    // cWins = 0;
+    // document.getElementById("pWins").innerHTML = "Player Wins: " + pWins;
+    // document.getElementById("cWins").innerHTML = "CPU Wins: " + cWins;
+    // document.getElementById("choice").style.opacity = '0';
+    // document.getElementById("playerImg").style.opacity = '0';
+    // document.getElementById("cpuChoice").style.opacity = '0';
+    // document.getElementById("cpuImg").style.opacity = '0';
+    // document.getElementById("winner").style.opacity = '0';
+    location.reload();
+}
+
+function showPlayer(){
+    document.getElementById("choice").style.opacity = '1.0';
+    document.getElementById("playerImg").style.opacity = '1.0';
+    console.log('opacity1');
+}
+
+function showCPU(){
+    document.getElementById("cpuChoice").style.opacity = '1.0';
+    document.getElementById("cpuImg").style.opacity = '1.0';
+}
+
+function showNext(){
+    document.getElementById("winner").style.opacity = '1.0';
 }

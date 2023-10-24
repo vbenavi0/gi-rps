@@ -3,30 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
-
         <section id = 'cont'>
             <h1>
                 Rock Paper Scissors
             </h1>
-            <h2 id = 'choice'>
+
+            <section id = 'choices'>
+                <section class = 'player'>
+                    <h2 id = 'choice'>
+                        Player
+                    </h2>
+                </section>
+    
+                <section class = 'cpu'>
+                <h2 id = 'cpuChoice'>   
+                    CPU
+                </h2>
+                </section>
+            </section>
+
+            <section id = 'imgs'>
+                <section class = 'player'>
+                    <img id = 'playerImg' src="images/rock.png">
+                </section>
+
+                <section class = 'cpu'>
+                    <img id = 'cpuImg' src="images/rock.png">
+                </section>
+            </section>
+
+            <h2 id = 'winner'>
+                Result
+            </h2>
+
+            <h2 id = 'choose'>
                 Choose Rock, Paper, or Scissors!
             </h2>
-            <h2 id = 'cpuChoice'>   
-            </h2>
-            <h2 id = 'winner'>
-            </h2>
+
             <section>
                 <button id = 'rock' class="op" onclick="choice('rock')"> <p>Rock</p> </button>
                 <button id = 'paper' class="op" onclick="choice('paper')"> <p>Paper</p> </button>
                 <button id = 'scissors' class="op" onclick="choice('scissors')"> <p>Scissors</p> </button>
             </section>
-
+            
             <p id  = 'pWins'>Player Wins: 0</p>
             <p id  = 'cWins'>CPU Wins: 0</p>
             <button id = 'reset' class="op" onclick="reset()"> <p>Reset</p> </button>
