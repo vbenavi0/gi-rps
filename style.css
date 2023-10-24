@@ -46,6 +46,14 @@ html{
     margin-right: 10px;
 }
 
+#choose{
+    transition: all .5s;
+}
+
+#buts{
+    transition: all .5s;
+}
+
 button{
     background-color: black;
     border: none;
@@ -62,6 +70,7 @@ button{
     display: flex;
     justify-content: center;
     width: 100%;
+    height: 400px;
     /* opacity: 25%; */
 }
 
@@ -77,7 +86,7 @@ button{
 
 
 #winner{
-    transition: all 3s;
+    transition: all 1s;
     opacity: 0%;
 }
 
