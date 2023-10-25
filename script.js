@@ -2,10 +2,11 @@ let player = '';
 let cpu = '';
 let pWins = 0;
 let cWins = 0;
+let ties = 0;
 let cpuChoice;
 
 function lose(){
-    document.getElementById("winner").innerHTML = "You lose";
+    document.getElementById("winner").innerHTML = "You lose!";
     document.getElementById("winner").style.color = 'red';
     cWins += 1;
     document.getElementById("cWins").innerHTML = "CPU Wins: " + cWins;
@@ -14,7 +15,7 @@ function lose(){
 }
 
 function win(){
-    document.getElementById("winner").innerHTML = "You win";
+    document.getElementById("winner").innerHTML = "You win!";
     document.getElementById("winner").style.color = 'green';
     pWins += 1;
     document.getElementById("pWins").innerHTML = "Player Wins: " + pWins;
@@ -23,8 +24,10 @@ function win(){
 }
 
 function tie(){
-    document.getElementById("winner").innerHTML = "You tie";
+    document.getElementById("winner").innerHTML = "You tie!";
     document.getElementById("winner").style.color = 'blue';
+    ties += 1;
+    document.getElementById("ties").innerHTML = "Ties: " + ties;
     showButs();
     showChoose();
 }
