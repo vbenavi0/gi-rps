@@ -4,7 +4,6 @@ html{
     font-family: 'Righteous', sans-serif;
     background-image: url(images/background.png);
     background-position: center;
-    /* background-size:cover;  */
     background-repeat: repeat;
     text-align: center;
 }
@@ -24,18 +23,25 @@ html{
 #choice{
     opacity: 0%;
     transition: all 1s;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #cpuChoice{
     opacity: 0%;
     transition: all 1s;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .player{
     display: flex;
     justify-content: left;
     width: 100%;
-    margin-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
 
 .cpu{
@@ -43,7 +49,9 @@ html{
     justify-content: right;
     width: 100%;
     justify-self: right;
-    margin-right: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
 
 #choose{
@@ -71,19 +79,21 @@ button{
     justify-content: center;
     width: 100%;
     height: 400px;
-    /* opacity: 25%; */
 }
 
 #playerImg{
     opacity: 0%;
     transition: all 1s;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #cpuImg{
     opacity: 0%;
     transition: all 1s;
+    margin-right: auto;
+    margin-left: auto;
 }
-
 
 #winner{
     transition: all 1s;
@@ -102,3 +112,19 @@ button{
     color: green;
 }
 /* transitions*/
+
+@media screen and (max-width:1000px){ /* Resizing for phone screens */
+    #imgs{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:500px){ /* Resizing for phone screens */
+    #imgs{
+        height: 100px;
+    }
+
+    button{
+        width: 100px;
+    }
+}
