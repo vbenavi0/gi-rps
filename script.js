@@ -1,11 +1,11 @@
-let player = '';
-let cpu = '';
-let pWins = 0;
-let cWins = 0;
-let ties = 0;
-let cpuChoice;
+let player = ''; //string for player choice
+let cpu = ''; //string for cpu choice
+let pWins = 0; //int to count player wins
+let cWins = 0; //int to count cpu wins
+let ties = 0; //int to count ties
+let cpuChoice; //variable for cpu randomizer
 
-function lose(){
+function lose(){ //function for when player loses
     document.getElementById("winner").innerHTML = "You lose!";
     document.getElementById("winner").style.color = 'red';
     cWins += 1;
@@ -14,7 +14,7 @@ function lose(){
     showChoose();
 }
 
-function win(){
+function win(){ //function for when player wins
     document.getElementById("winner").innerHTML = "You win!";
     document.getElementById("winner").style.color = 'green';
     pWins += 1;
@@ -23,7 +23,7 @@ function win(){
     showChoose();
 }
 
-function tie(){
+function tie(){ //function for when player and cpu tie
     document.getElementById("winner").innerHTML = "You tie!";
     document.getElementById("winner").style.color = 'blue';
     ties += 1;
@@ -32,57 +32,57 @@ function tie(){
     showChoose();
 }
 
-function pRock(){
+function pRock(){ //function for if player chooses rock
     document.getElementById("playerImg").src = "images/rock.png";
     document.getElementById("choice").innerHTML = "You chose: rock";
 }
-function pPaper(){
+function pPaper(){ //function for if player chooses paper
     document.getElementById("playerImg").src = "images/paper.png";
     document.getElementById("choice").innerHTML = "You chose: paper";
 }
-function pScissors(){
+function pScissors(){ //function for if player chooses scissors
     document.getElementById("playerImg").src = "images/scissors.png";
     document.getElementById("choice").innerHTML = "You chose: scissors";
 }
 
-function cRock(){
+function cRock(){ //function for if cpu chooses rock
     document.getElementById("cpuImg").src = "images/rock.png";
     document.getElementById("cpuChoice").innerHTML = "CPU chose: rock";
 }
-function cPaper(){
+function cPaper(){ //function for if cpu chooses paper
     document.getElementById("cpuImg").src = "images/paper.png";
     document.getElementById("cpuChoice").innerHTML = "CPU chose: paper";
 }
-function cScissors(){
+function cScissors(){ //function for if cpu chooses scissors
     document.getElementById("cpuImg").src = "images/scissors.png";
     document.getElementById("cpuChoice").innerHTML = "CPU chose: scissors";
 }
 
-function hideButs(){
+function hideButs(){ //function to hide player buttons
     document.getElementById("buts").style.opacity = '0';
 }
 
-function showButs(){
+function showButs(){ //function to show player buttons
     document.getElementById("buts").style.opacity = '1';
 }
 
-function hideChoose(){
+function hideChoose(){ //function to hide prompt
     document.getElementById("choose").style.opacity = '0';
 }
 
-function showChoose(){
+function showChoose(){ //function to show prompt
     document.getElementById("choose").innerHTML = "Choose Next Hand:"
     document.getElementById("choose").style.opacity = '1';
 }
 
-function choice(hand){
+function choice(hand){ //function to perform action based on player button input
     document.getElementById("choice").style.opacity = '0';
     document.getElementById("playerImg").style.opacity = '0';
     document.getElementById("cpuChoice").style.opacity = '0';
     document.getElementById("cpuImg").style.opacity = '0';
     document.getElementById("winner").style.opacity = '0';
     hideButs();
-    hideChoose();
+    hideChoose(); //reset player view before playing user hand
     player = hand;
 
     if(player === "rock"){
@@ -136,21 +136,21 @@ function choice(hand){
     setTimeout(showNext, 3000);
 }
 
-function reset(){
+function reset(){ //function to reset page
     location.reload();
 }
 
-function showPlayer(){
+function showPlayer(){ //function to show player hand
     document.getElementById("choice").style.opacity = '1.0';
     document.getElementById("playerImg").style.opacity = '1.0';
     console.log('opacity1');
 }
 
-function showCPU(){
+function showCPU(){ //function to show cpu hand
     document.getElementById("cpuChoice").style.opacity = '1.0';
     document.getElementById("cpuImg").style.opacity = '1.0';
 }
 
-function showNext(){
+function showNext(){ //function to show winner
     document.getElementById("winner").style.opacity = '1.0';
 }
