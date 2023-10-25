@@ -7,7 +7,7 @@ let cpuChoice; //variable for cpu randomizer
 
 function lose(){ //function for when player loses
     document.getElementById("winner").innerHTML = "You lose!";
-    document.getElementById("winner").style.color = 'red';
+    document.getElementById("winner").style.color = 'red'; // Change 
     cWins += 1;
     document.getElementById("cWins").innerHTML = "CPU Wins: " + cWins;
     showButs();
@@ -82,11 +82,12 @@ function choice(hand){ //function to perform action based on player button input
     document.getElementById("cpuImg").style.opacity = '0';
     document.getElementById("winner").style.opacity = '0';
     hideButs();
-    hideChoose(); //reset player view before playing user hand
+    hideChoose(); 
+    //reset player view before playing user hand
     player = hand;
 
     if(player === "rock"){
-        setTimeout(pRock, 1000);
+        setTimeout(pRock, 1000); //time before functions animate on screen, 1000ms or 1sec
     }
     else if(player === "paper"){
         setTimeout(pPaper, 1000);

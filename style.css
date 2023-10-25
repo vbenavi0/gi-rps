@@ -8,7 +8,7 @@ html{
     text-align: center;
 }
 
-.cont{
+.cont{ 
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -22,7 +22,7 @@ html{
 
 #choice{
     opacity: 0%;
-    transition: all 1s;
+    transition: all 1s; /* animation/transition timing */
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -30,7 +30,7 @@ html{
 
 #cpuChoice{
     opacity: 0%;
-    transition: all 1s;
+    transition: all 1s; /* animation/transition timing */
     margin-right: auto;
     margin-left: auto;
 }
@@ -55,11 +55,11 @@ html{
 }
 
 #choose{
-    transition: all .5s;
+    transition: all .5s; /* animation/transition timing */
 }
 
 #buts{
-    transition: all .5s;
+    transition: all .5s; /* animation/transition timing */
 }
 
 button{
@@ -83,20 +83,20 @@ button{
 
 #playerImg{
     opacity: 0%;
-    transition: all 1s;
+    transition: all 1s; /* animation/transition timing */
     margin-right: auto;
     margin-left: auto;
 }
 
 #cpuImg{
     opacity: 0%;
-    transition: all 1s;
+    transition: all 1s; /* animation/transition timing */
     margin-right: auto;
     margin-left: auto;
 }
 
 #winner{
-    transition: all 1s;
+    transition: all 1s; /* animation/transition timing */
     opacity: 0%;
 }
 
@@ -111,9 +111,8 @@ button{
 .winText{
     color: green;
 }
-/* transitions*/
 
-@media screen and (max-width:1000px){ /* Resizing for phone screens */
+@media screen and (max-width:1000px){ /* Resizing for tablet screens */
     #imgs{
         height: 200px;
     }
