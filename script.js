@@ -71,6 +71,7 @@ function hideChoose(){
 }
 
 function showChoose(){
+    document.getElementById("choose").innerHTML = "Choose Next Hand:"
     document.getElementById("choose").style.opacity = '1';
 }
 
@@ -133,23 +134,9 @@ function choice(hand){
     setTimeout(showPlayer, 1000);
     setTimeout(showCPU, 2000);
     setTimeout(showNext, 3000);
-    document.getElementById("choose").innerHTML = "Choose Next Hand!"
 }
 
 function reset(){
-    // document.getElementById("choose").innerHTML = "Choose Rock, Paper, or Scissors!"
-    // document.getElementById("choice").innerHTML = "Player"
-    // document.getElementById("cpuChoice").innerHTML = "CPU";
-    // document.getElementById("winner").innerHTML = "Result";
-    // pWins = 0;
-    // cWins = 0;
-    // document.getElementById("pWins").innerHTML = "Player Wins: " + pWins;
-    // document.getElementById("cWins").innerHTML = "CPU Wins: " + cWins;
-    // document.getElementById("choice").style.opacity = '0';
-    // document.getElementById("playerImg").style.opacity = '0';
-    // document.getElementById("cpuChoice").style.opacity = '0';
-    // document.getElementById("cpuImg").style.opacity = '0';
-    // document.getElementById("winner").style.opacity = '0';
     location.reload();
 }
 
